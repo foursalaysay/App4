@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.MainPage">
+    <ScrollView>
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="ELECTRIC BILL " HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <Entry Placeholder="Enter Meter Number:" x:Name="meterno"/>
+        <Entry Placeholder="Enter Consumption Reading:"  x:Name="consumption"/>
+           
+        
+        <Label Text="Membership"/>
+        <Label Text="----------------------"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <CheckBox x:Name="check1" Grid.Row="0" Grid.Column="0"/>
+            <Label Text="New Member" Grid.Row="0" Grid.Column="1"/>
+
+            <CheckBox x:Name="check2" Grid.Row="1" Grid.Column="0"/>
+            <Label Text="Old Member" Grid.Row="1" Grid.Column="1"/>
+        </Grid>
+
+
+
+
+        <Label Text="-------------------------------------------------"/>
+        <RadioButton x:Name="option1" Content="Less than 72"/>
+        <RadioButton x:Name="option2" Content="Less than or equal to 150"/>
+        <RadioButton x:Name="option3" Content="Less than or equal to 300"/>
+        <RadioButton x:Name="option4" Content="Less than or equal to 400"/>
+        <RadioButton x:Name="option5" Content="Less than or equal to 500"/>
+        <RadioButton x:Name="option6" Content="Otherwise"/>
+
+
+        <Label Text="-------------------------------------------------"/>
+        <Label Text="Type of Registration"/>
+        <Picker x:Name="myPicker" Title="Type of Registration">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>1</x:String>
+                    <x:String>2</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+
+
+
+        <Button Clicked="Button_Clicked_1" Text="Calculate"/>
+
+            <Label Text="-------------------------------------------------"/> 
+            <Label Text="Add Ons:"/>
+        <Label Text="" x:Name="add"/>
+        <Label Text="Charge Value:"/>
+        <Label Text="" x:Name="chargeValue"/>
+        
+        <Label Text="Vat:"/>
+        <Label Text="" x:Name="vat"/>
+        <Label Text="Principal Amount:"/>
+        <Label Text="" x:Name="principal"/>
+        <Label Text="Amount Payable:"/>
+        <Label Text="" x:Name="amountpayable"/>
+
+
+
+    </StackLayout>
+    </ScrollView>
+
+</ContentPage>
